@@ -1,7 +1,4 @@
-sudo apt update 
-sudo wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.15.0-linux-x86_64.tar.gz
-sudo apt install tar -y
-sudo tar -zxvf elasticsearch-7.15.0-linux-x86_64.tar.gz
-sudo mv elasticsearch-7.15.0 elastic-search 
+curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
 sudo apt update
-sudo apt install openjdk-8-jdk openjdk-8-jre -y
+sudo apt install elasticsearch
